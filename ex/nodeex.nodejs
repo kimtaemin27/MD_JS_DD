@@ -1,0 +1,14 @@
+Last login: Fri Aug  5 16:20:14 on console
+gimtaemin@gimtaemin-ui-MacBookPro ~ % node -v
+v18.7.0
+gimtaemin@gimtaemin-ui-MacBookPro ~ % npm -v
+8.15.0
+gimtaemin@gimtaemin-ui-MacBookPro ~ % node
+Welcome to Node.js v18.7.0.
+Type ".help" for more information.
+> 1+2
+3
+> Math.max(1, 2, 3)
+3
+> [1, 2, 3].filter(v => v % 2)
+[ 1, 3 ]
