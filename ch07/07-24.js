@@ -1,0 +1,6 @@
+var x = 10;
+
+// 삼항 조건 연산자 표현식은 표현식이 아닌 문이다
+var result = x % 2 ? '홀수' : '짝수';
+
+console.log(result);
