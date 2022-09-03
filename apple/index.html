@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 id="hi">hi</h1>
+  <h1 id="bye">bye</h1>
+  <h1 id="good">good job</h1>
+  <script>
+    document.getElementById('hi').innerHTML='hello';
+    // class, href, style 등 도 바꿀 수 있다
+    document.getElementById('bye').innerHTML='nice to meet you';
+    // getElementById 를 셀렉터라고 부르기도 한다
+    // 웹 문서의 원하는 부분을 찾을 때 써서
+    
+    // 폰트 사이즈 변경
+    document.getElementById('good').style.fontSize='16px';
+  </script>
+</body>
+</html>
