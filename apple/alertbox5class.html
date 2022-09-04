@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  
+  <div class="alert-box" id="alert">
+    <p class="title">알림창</p>
+    <button id="eventClose">닫기</button>
+  </div>
+  <button onclick="boxControl('block')">열기</button>
+
+  <button onclick="changeName('block', '아이디')">아이디</button>
+  <button onclick="changeName('block', '비밀번호')">비밀번호</button>
+  
+  
+  <script>
+
+    // eventlistener 감시한다고 생각하면 된다
+    // 파라미터 자리에 들어가는 함수를 콜백 함수라 부른다 순차적 실행
+    document.getElementById('eventClose').addEventListener('click', function(){
+      document.getElementById('alert').style.display = 'none';
+    });
+
+    function changeName(disoption, infoName){
+      document.getElementsByClassName('title')[0].innerHTML =infoName +' 입력하세요';
+      document.getElementById('alert').style.display = disoption;
+    }
+    
+    function boxControl(disoption){
+      document.getElementById('alert').style.display = disoption;
+    }
+
+  </script>
+</body>
+</html>

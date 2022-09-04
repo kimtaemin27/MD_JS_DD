@@ -11,19 +11,15 @@
   
   <div class="alert-box" id="alert">
     알림창
-    <button onclick="boxControl()">닫기</button>
+    <button onclick="boxControl('none')">닫기</button>
   </div>
-  <button onclick="boxControl()">열기</button>
+  <button onclick="boxControl('block')">열기</button>
   
   
   <script>
     
-    function boxControl(){
-      document.getElementById('alert').style.display='block';
-    }
-    
-    function closebox() {
-      document.getElementById('alert').style.display='none';
+    function boxControl(disoption){
+      document.getElementById('alert').style.display = disoption;
     }
 
   </script>

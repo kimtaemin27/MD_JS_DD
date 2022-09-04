@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  
+  <div class="alert-box" id="alert">
+    <p id="title">알림창</p>
+    <button onclick="boxControl('none')">닫기</button>
+  </div>
+  <button onclick="boxControl('block')">열기</button>
+
+  <button onclick="changeName('block', '아이디')">아이디</button>
+  <button onclick="changeName('block', '비밀번호')">비밀번호</button>
+  
+  
+  <script>
+
+    function changeName(disoption, infoName){
+      document.getElementById('title').innerHTML =infoName +' 입력하세요';
+      document.getElementById('alert').style.display = disoption;
+    }
+    
+    function boxControl(disoption){
+      document.getElementById('alert').style.display = disoption;
+    }
+
+  </script>
+</body>
+</html>
