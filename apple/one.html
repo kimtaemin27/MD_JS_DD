@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/apple/css/main_one.css">
+</head>
+<body>
+
+    <!-- 1 강 -->
+    <!-- <h1 id="hello">hello</h1> -->
+    <!-- <h1 id="hi">hi</h1> -->
+    <!-- 1 강 -->
+
+
+    <!-- 2 강 -->
+    <!-- <div class="alert-box" id="alertBox">
+        알림창 -->
+        <!-- 문제 -->
+        <!-- <button onclick="boxControl('none')">닫기</button> -->
+        <!-- 문제 -->
+    <!-- </div>
+    <button onclick="boxControl('block')">버튼</button> -->
+    <!-- 2 강 -->
+
+    <!-- 4 강 -->
+    <div class="alert-box" id="alertBox">
+        <p id="inText">알림창</p>
+        <button id="close">닫기</button>
+    </div>
+
+    <button onclick="boxOn('block', 'login')">버튼 1</button>
+    <button onclick="boxOn('block', 'pass')">버튼 2</button>
+    <!-- 4 강 -->
+
+
+    <!-- 3강 -->
+
+    <!-- 3강 -->
+
+    <script>
+        // 1 강
+        // document.getElementById('hello').innerHTML = 'hi';
+        // document.getElementById('hello').style.color = 'red';
+        // document.getElementById('hi').innerHTML = 'hello';
+        // 문제
+        // document.getElementById('hello').style.fontSize = '16px';
+        // 문제
+        // 1 강
+    </script>
+
+
+    <script>
+        // 3 강
+        // function openBox(){
+        //     document.getElementById('alert_box').style.display = 'block';
+        // }
+
+        // function closeBox(){
+        //     document.getElementById('alert_box').style.display = 'none';
+        // }
+        // 3 강
+    </script>
+
+
+    <script>
+        // 4 강
+        // function boxControl(boxStyle) {
+        //     document.getElementById('alertBox').style.display = boxStyle;
+        // }
+
+        function boxOn(boxStyle, boxControl) {
+            document.getElementById('alertBox').style.display = boxStyle;
+            document.getElementById('inText').innerHTML = boxControl;
+        }
+
+        // function boxOff(boxStyle) {
+        //     document.getElementById('alertBox').style.display = boxStyle;
+        // }
+
+        document.getElementById('close').addEventListener('click', function(){
+            document.getElementById('alertBox').style.display = 'none';
+        })
+        // 4 강
+    </script>
+
+</body>
+</html>
