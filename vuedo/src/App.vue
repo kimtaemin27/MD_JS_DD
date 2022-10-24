@@ -9,6 +9,8 @@
         원룸샵
         <h4>{{ products[0] }}</h4>
         <p>만원</p>
+        <button @click="increase">허위매물신고</button>
+        <span>신고 수 : {{ siNum }}</span>
     </div>
     <div>
         <h4>{{ products[1] }}</h4>
@@ -29,8 +31,16 @@ export default {
         return{
             products : ['역삼동 원룸', '천호동 원룸', '마포구 원룸'],
             menu : ['Home', 'Shop', 'About'],
+            siNum : 0,
         }
     },
+
+    methods :{
+        increase() {
+            this.siNum++;
+        }
+    },
+
     components: {
     
     }
