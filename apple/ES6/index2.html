@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>2</h1>
+
+    <button id="bt">button</button>
+    <script>
+
+        // constructor
+        // function mac() {
+        //     this.name = 'kim';
+        // }
+        // // 새로 생성
+        // var obj = new mac();
+
+        // console.log(obj);
+
+        document.getElementById('bt').addEventListener('click', function(e) {
+            this;
+            // EventListener 안에서 this 를 사용하면
+            // e.currentTarget 과 똑같은 의미
+            // e.currentTarget 을 사용하려면 function ( ) 괄호 안에 e 넣어주기
+            // console.log(this);
+            // console.log(e.currentTarget);
+            // 둘 다 지금 이벤트가 동작하고 있는 곳을 출력해 준다
+
+            var ar = [1, 2, 3];
+            ar.forEach(function(a) {
+                // 그낭 forEach
+                // a 값은 배열 안의 값들을 뜻한다
+                // 결국 3번 반복 된다
+                // console.log(a);
+                console.log(this);
+                // 함수가 쓰인 위치에 따라 this 의 값이 변한다
+                // 이 this 는 어디에 붙어있는게 아니라 일반 함수이기 때문에 window 가 뜬다
+            });
+        })
+
+        var obj = {
+            name : ['kim', 'lee', 'park'],
+            fuc2 : function() {
+                // console.log(this);
+                // obj.name.forEach(function(a) {
+                //     console.log(this);
+                //     // 이 함수는 그냥 함수
+                //     // 이 forEach 문 밖에서 출력하면 obj를 출력
+                // })
+                
+                obj.name.forEach(()=> {
+                    console.log(this);
+                    // arrow 함수 안에서의 this 는
+                    // 상위 값을 그대로 받아오기 때문에
+                    // 위 forEach 문 밖에서 출력한 것과 같은 결과
+                })
+            }
+        }
+        
+        obj.fuc2;
+    </script>
+</body>
+</html>
